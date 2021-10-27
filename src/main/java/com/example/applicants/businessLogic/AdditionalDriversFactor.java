@@ -7,12 +7,18 @@ public class AdditionalDriversFactor {
         double additionalDriversFactor = 0.0;
         int additionalDriversInt = Integer.parseInt(additionalDrivers);
 
-        if (additionalDriversInt <2){
-            return additionalDriversFactor = 1.1;
+        try{
+            if (additionalDriversInt >= 0 && additionalDriversInt <2){
+                return additionalDriversFactor = 1.1;
+            }
+            else {
+                return additionalDriversFactor = 1.2;
+            }
+        } catch (NumberFormatException e){
+            throw new NumberFormatException("String cannot be converted to int");
         }
-        else{
-            return additionalDriversFactor = 1.2;
-        }
+
+
     }
 
 }
