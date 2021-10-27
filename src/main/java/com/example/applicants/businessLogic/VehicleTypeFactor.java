@@ -22,7 +22,7 @@ public class VehicleTypeFactor {
             return typeFactor = 1.7;
         }
         else{
-            return typeFactor = 0.0;
+            throw new IllegalArgumentException("Invalid Vehicle Type Exception");
         }
     }
 }

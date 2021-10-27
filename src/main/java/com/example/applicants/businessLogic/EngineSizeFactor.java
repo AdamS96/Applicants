@@ -25,7 +25,7 @@ public class EngineSizeFactor {
             return engineSizeFactor = 3.5;
         }
         else{
-            return engineSizeFactor = 0.0;
+            throw new IllegalArgumentException("Invalid Engine Size Exception");
         }
     }
 }
